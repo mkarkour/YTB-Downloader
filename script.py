@@ -10,7 +10,6 @@ def main(path):
         print(url)
         if not os.path.exists("youtube video"):
             os.makedirs("youtube video")
-        path = (path)
         if url !='':
             pytube.YouTube(url).streams.get_highest_resolution().download(path)
             url_entry.delete(0,END)
@@ -23,7 +22,7 @@ def main(path):
     window.title("Youtube Downloader")
     window.geometry("480x240")
 
-    window.iconbitmap(r"C:\Users\karme\OneDrive\Documents\dw_youtube\robotique.ico")
+    window.iconbitmap(r"{path}")
     window.config(background="#CD0000")
     
     label_sep = Label(window,text="",font=("Cambria",12),bg="#CD0000",justify=RIGHT)
@@ -39,5 +38,7 @@ def main(path):
     button.grid(row=2,column=3)
         
     window.mainloop()
-main()
+
+path = input("Your path :")
+main(path)
     
