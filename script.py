@@ -21,9 +21,6 @@ def main(path):
     window = Tk()
     window.title("Youtube Downloader")
     window.geometry("480x240")
-
-    window.iconbitmap(r"{path}")
-    window.config(background="#CD0000")
     
     label_sep = Label(window,text="",font=("Cambria",12),bg="#CD0000",justify=RIGHT)
     label_sep.grid(row=1)
