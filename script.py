@@ -30,12 +30,18 @@ def main(path):
     
     url_entry = Entry(window, font=("Cambria",12),bg="#CD0000",fg="White",justify=RIGHT,width=25)
     url_entry.grid(row=2,column=2)
+
+    label_path = Label(window,text="Path to save videos", font=("Cambria",12),fg="White",bg="#CD0000",justify=RIGHT)
+    label_path.grid(row=3,column=1)
+    
+    path_entry = Entry(window, font=("Cambria",12),bg="#CD0000",fg="White",justify=RIGHT,width=25)
+    path_entry.grid(row=3,column=2)
     
     button = Button(window,text="Confirm",font=("Cambria",12),fg="White",bg="#CD0000",command=apply)
     button.grid(row=2,column=3)
         
     window.mainloop()
 
-path = input("Your path :")
-main(path)
-    
+
+if __name__ == '__main__':
+    main()
